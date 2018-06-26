@@ -9,9 +9,24 @@
 import UIKit
 
 class EmojiTableViewController: UITableViewController {
+    
+    var emojis: [Emoji] = [
+    
+        Emoji(symbol: "😀", name: "Grinning Face",
+              description: "A typical smiley face.", usage: "Happiness :)"),
+        Emoji(symbol: "😕", name: "Confused Face", description: "A confused, puzzled face.", usage: "Unsure what to think; displeasure"),
+        Emoji(symbol: "😍", name: "Heart Eyes", description: "A smiley face with hearts for eyes.", usage: "Love of something; attractive"),
+        
+        
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //edit items in a list (array of emojis) This will allow you to reorder the cells
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,30 +42,49 @@ class EmojiTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return emojis.count
+        } else {
+            return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath)
 
         // Configure the cell...
+    
+        let emoji = emojis[indexPath.row]
+        
+        cell.textLabel?.text = "\(emoji.symbol) - \(emoji.name)"
+        cell.detailTextLabel?.text = emoji.description
+        cell.showsReorderControl = true
 
         return cell
     }
-    */
+    
+    /*
+     Print the emoji and its location in the array/IndexPath.
+     Message in the console will appear everytime a row is selected
+     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoji = emojis[indexPath.row]
+        print("\(emoji.symbol) \(indexPath)")
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    // Return false if you do not want the specified item to be editable.
         return true
     }
     */
