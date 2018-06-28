@@ -26,27 +26,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-DW-Avo">
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xts-uE-EEp">
                                             <rect key="frame" x="16" y="11" width="343" height="22"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-Jl-I85">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="😎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LE1-GW-KNG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="420-5M-PTU">
+                                                    <rect key="frame" x="27" y="0.0" width="316" height="22"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPF-iQ-bQG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="316" height="11"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-M8-4Hp">
+                                                            <rect key="frame" x="0.0" y="11" width="316" height="11"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cwz-Hp-P7Y">
-                                            <rect key="frame" x="198" y="-79" width="110" height="200"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="m8b-DW-Avo" secondAttribute="trailing" id="AT0-uW-PgF"/>
-                                        <constraint firstItem="m8b-DW-Avo" firstAttribute="leading" secondItem="fjA-78-WOG" secondAttribute="leadingMargin" id="HZH-QO-jBD"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="m8b-DW-Avo" secondAttribute="bottom" id="Jqo-cJ-GSz"/>
-                                        <constraint firstItem="m8b-DW-Avo" firstAttribute="top" secondItem="fjA-78-WOG" secondAttribute="topMargin" id="Rq2-ly-mH0"/>
+                                        <constraint firstItem="xts-uE-EEp" firstAttribute="top" secondItem="fjA-78-WOG" secondAttribute="topMargin" id="3VW-TB-zuH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xts-uE-EEp" secondAttribute="bottom" id="GIs-qh-9M8"/>
+                                        <constraint firstItem="xts-uE-EEp" firstAttribute="leading" secondItem="fjA-78-WOG" secondAttribute="leadingMargin" id="ST8-Za-nx0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xts-uE-EEp" secondAttribute="trailing" id="zR7-Dd-nL5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
